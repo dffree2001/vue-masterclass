@@ -1,6 +1,6 @@
 <template>
   
-  <div class="col-large push-top">
+    <div v-if="thread" class="col-large push-top">
     <h1>{{ thread.title }}</h1>
 
           <div class="post-list">
@@ -36,7 +36,12 @@
               </div>
 
           </div>
-      </div>
+    </div>
+    <div v0else class="col-full text-center">
+        <h1>Thread does not exist</h1>
+        <router-link :to="{name: 'Home'}">Read some cool threads</router-link>
+        <p>Look at how to set the server to return a 404 code for Not Found page</p>
+  </div>
 </template>
 
 <script>
