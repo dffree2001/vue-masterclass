@@ -3,19 +3,15 @@
   <div class="container">
     
   </div>
-  <page-home/>
+  <router-view/>
 </template>
 
 <script>
 
-import PageHome from '@/components/PageHome'
-
 
 export default {
   name: 'App',
-  components: {
-    PageHome
-  }
+  
 }
 </script>
 
