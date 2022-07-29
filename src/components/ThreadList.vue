@@ -17,14 +17,14 @@
 
                   <div class="activity">
                       <p class="replies-count">
-                          {{ thread.posts.length }}
+                         {{ thread.posts.length - 1 }} {{ (thread.posts.length - 1 != 1 ? "replies" : "reply") }} 
                       </p>
 
                       <img class="avatar-medium" :src="userById(thread.userId).avatar" alt="">
 
                       <div>
                           <p class="text-xsmall">
-                              <a href="profile.html">{{ userById(thread.userId) }}</a>
+                              <a href="profile.html">{{ userById(thread.userId).name }}</a>
                           </p>
                           <p class="text-xsmall text-faded">{{ thread.publishedAt }}</p>
                       </div>
@@ -42,9 +42,14 @@
 <script>
 import sourceData from '@/data.json'
 export default {
+  props: {
+    threads: {
+        type: Array,
+        required: true
+    }
+  },
   data () {
     return {
-      threads: sourceData.threads,
       posts: sourceData.posts,
       users: sourceData.users
     }
