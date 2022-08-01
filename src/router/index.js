@@ -1,4 +1,4 @@
-import PageHome from "@/pages/Home.vue";
+import PageHome from "@/pages/HomePage.vue";
 import PageThreadShow from "@/pages/ThreadShow.vue";
 import PageNotFound from "@/pages/NotFound.vue";
 import { createRouter, createWebHistory } from "vue-router";
