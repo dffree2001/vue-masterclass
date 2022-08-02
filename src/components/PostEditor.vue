@@ -2,7 +2,7 @@
     <div class="col-full">
         <form @submit.prevent="save">
             <div class="form-group">
-                <textarea v-model="newPostText" name="" id="" cols="30" rows="10" class="form-input"></textarea>
+                <textarea v-model="text" name="" id="" cols="30" rows="10" class="form-input"></textarea>
             </div>
             <div class="form-actions">
                 <button class="btn-blue">Submit posts</button>
@@ -23,7 +23,7 @@ export default {
             const postId = 'gggg' + Math.random()
             const post = {
                 id: postId,
-                text: this.newPostText,
+                text: this.text,
                 publishedAt: Math.floor(Date.now()/1000),
                 userId: 'ALXhxjwgY9PinwNGHpfai6OWyDu2'
         }
